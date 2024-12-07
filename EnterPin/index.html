@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Pin</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- jaro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+
+    <!-- monserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section class="container-login">
+        <div class="container-content-login">
+          <button class="container-icon" onclick="location='../index.html'">
+            <img src="./images/icon-walletKu.webp" alt="" width="50px" />
+            <p class="text-icon">WalletKu</p>
+          </button>
+          <h1 class="title-login">Enter Your Pin 👋</h1>
+          <p class="desc-login">
+            Please save your pin because this so important.
+          </p>
+          <form class="form-login" action="../DashBoard/index.html">
+            <div class="pin-input-container">
+              <input
+                inputmode="numeric"
+                pattern="\d"
+                maxlength="1"
+                class="pin-input"
+                placeholder="•"
+                min="0"
+                max="1" />
+              <input
+                inputmode="numeric"
+                pattern="\d"
+                maxlength="1"
+                class="pin-input"
+                placeholder="•"
+                min="0"
+                max="1" />
+              <input
+                inputmode="numeric"
+                pattern="\d"
+                maxlength="1"
+                class="pin-input"
+                placeholder="•"
+                min="0"
+                max="1" />
+              <input
+                inputmode="numeric"
+                pattern="\d"
+                maxlength="1"
+                class="pin-input"
+                placeholder="•"
+                min="0"
+                max="1" />
+              <input
+                inputmode="numeric"
+                pattern="\d"
+                maxlength="1"
+                class="pin-input"
+                placeholder="•"
+                min="0"
+                max="1" />
+              <input
+                inputmode="numeric"
+                pattern="\d"
+                maxlength="1"
+                class="pin-input"
+                placeholder="•"
+                min="0"
+                max="1" />
+            </div>
+            <button type="submit" class="btn-login">Login</button>
+          </form>
+          <span class="regist-event"
+            >Forgot Your Pin? <a href="../Regist/index.html">Reset</a></span
+          >
+        </div>
+      </section>
+      <section class="container-image-login">
+        <div style="display: flex; justify-content: center">
+          <img src="./images/logo-enter-pin.webp" alt="" width="76.7%" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
