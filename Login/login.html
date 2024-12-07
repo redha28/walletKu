@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- jaro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+
+    <!-- monserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section class="container-login">
+        <div class="container-content-login">
+          <button class="container-icon" onclick="location='../index.html'">
+            <img src="./images/icon-walletKu.webp" alt="" width="50px" />
+            <p class="text-icon">WalletKu</p>
+          </button>
+          <h1 class="title-login">Hello Welcome Back 👋</h1>
+          <p class="desc-login">
+            Fill out the form correctly or you can login with several option.
+          </p>
+          <button class="btn-gplay">
+            <img src="./images/icon-google.webp" alt="" />
+            <span>Sign In With Google</span>
+          </button>
+          <button class="btn-apps">
+            <img src="./images/icon-fb.webp" alt="" class="icon-fb" />
+            <span>Sign In With Facebook</span>
+          </button>
+          <div style="display: flex; align-items: center">
+            <div style="flex: 1; height: 1px; background: #000"></div>
+            <span style="margin: 0 10px; text-align: center">or</span>
+            <div style="flex: 1; height: 1px; background: #000"></div>
+          </div>
+
+          <form class="form-login" action="../EnterPin/index.html">
+            <label for="" class="text-bold">Email</label>
+            <div class="group-mail">
+              <img src="./images/icon-mail.webp" alt="" class="icon-mail" />
+              <input
+                class="input-mail"
+                type="text"
+                placeholder="Enter Your Email" />
+            </div>
+            <label for="" class="text-bold">Password</label>
+            <div class="group-password">
+              <img
+                src="./images/icon-password.webp"
+                alt=""
+                class="icon-password" />
+              <input
+                type="password"
+                name=""
+                class="input-password"
+                placeholder="Enter Your Password" />
+              <!-- <img src="./images/icon-eye.webp" alt="" /> -->
+            </div>
+            <span class="forgot-password"
+              >Forgot Password?
+              <a href="../ForgotPassword/index.html">Reset</a></span
+            >
+            <button type="submit" class="btn-login">Login</button>
+          </form>
+          <span class="regist-event"
+            >Have An Account? <a href="../Regist/index.html">Regist</a></span
+          >
+        </div>
+      </section>
+      <section class="container-image-login">
+        <img src="./images/login-icon.webp" alt="" width="100%" />
+      </section>
+    </main>
+  </body>
+</html>
