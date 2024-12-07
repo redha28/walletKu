@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+    <!-- jaro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+
+    <!-- monserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="padding-general">
+      <div class="section-logo">
+        <div class="container-icon" onclick="location='../index.html'">
+          <img
+            src="./images/icon-walletKu.webp"
+            alt="icon-walletKu"
+            width="50px" />
+          <p class="text-icon text-blue">WalletKu</p>
+        </div>
+      </div>
+      <div class="container-info-profile">
+        <span class="text-secondary text-bold">Ghaluh Wizard</span>
+        <img src="./images/users/Ghaluh.webp" alt="" />
+        <label class="hamburger">
+          <input type="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path
+              class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+        <div class="container-nav">
+          <button class="btn-nav btn-nav-active">
+            <img src="./images/icon/icon-dashboard.webp" alt="" />
+            <span>Dashboard</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/icon-transfer.webp" alt="" class="icon" />
+            <span>Transfer</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/history.webp" alt="" class="icon" />
+            <span>History</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/icon-topUp-nav.webp" alt="" class="icon" />
+            <span>Top Up</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/icon-profile.webp" alt="" class="icon" />
+            <span>Profile</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/Log Out.webp" alt="" class="icon" />
+            <span>Logout</span>
+          </button>
+        </div>
+      </nav>
+      <section class="main-content">
+        <!-- caontiner main -->
+        <div class="container-main">
+          <!-- Baris Pertama -->
+          <section class="container-info">
+            <!-- Box 1 -->
+            <div class="box-info">
+              <div class="container-icon-info">
+                <img src="./images/icon/balance.webp" alt="" />
+                <p class="text">Balance</p>
+              </div>
+              <p class="text-bold">Rp.120.000</p>
+              <div>
+                <span class="text-green text-semi-bold">+2%</span>
+                <img src="./images/icon/arrow-up.webp" alt="" />
+                <span class="text-green text-semi-bold">3 Days Ago</span>
+              </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="box-info">
+              <div class="container-icon-info">
+                <img src="./images/icon/icon-income.webp" alt="" />
+                <p>Income</p>
+              </div>
+              <p class="text-bold">Rp2.120.000</p>
+              <div>
+                <span class="text-green text-semi-bold">+11.01%</span>
+                <img src="./images/icon/arrow-up.webp" alt="" />
+              </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="box-info">
+              <div class="container-icon-info">
+                <img src="./images/icon/icon-expense.webp" alt="" />
+                <p>Expense</p>
+              </div>
+              <p class="text-bold">Rp.200.000</p>
+              <div>
+                <span class="text-red text-semi-bold">-5.06%</span>
+                <img src="./images/icon/arrow-down.webp" alt="" />
+              </div>
+            </div>
+          </section>
+          <!-- Baris Kedua -->
+          <section class="container-service">
+            <div>
+              <p class="text-bold">Fast Service</p>
+            </div>
+            <div class="container-btn">
+              <button class="btn-topUp">
+                <img
+                  src="./images/icon/icon-topUp.webp"
+                  alt=""
+                  class="icon-topUp" />
+                <span>Top Up</span>
+              </button>
+              <button class="btn-transfer">
+                <img
+                  src="./images/icon/icon-transfer.webp"
+                  alt=""
+                  class="icon-white" />
+                <span>Transfer</span>
+              </button>
+            </div>
+          </section>
+          <!-- Baris Ke 3 -->
+          <section class="section-chart">
+            <div class="info-chart">
+              <p class="text-bold">Income Chart</p>
+              <div class="container-option">
+                <label for="days" hidden>7 Days</label>
+                <select name="days" id="days">
+                  <option value="7days">7 Days</option>
+                  <option value="1mount">1 Mount</option>
+                  <option value="6mount">6 Mount</option>
+                </select>
+                <label for="days" hidden>7 Days</label>
+                <select name="days" id="days">
+                  <option value="income">Income</option>
+                  <option value="Expense">Expense</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="container-chart">
+                <img src="./images/icon/Chart.webp" alt="" />
+              </div>
+            </div>
+          </section>
+        </div>
+        <aside>
+          <div class="header-aside">
+            <p class="text-bold">Transaction History</p>
+            <a
+              href="../History/index.html"
+              class="text-semi-bold text-blue"
+              style="text-decoration: none"
+              >See All</a
+            >
+          </div>
+          <div class="container-box-user">
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Robert Fox.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Robert Fox</p>
+                <p class="text-secondary">Transfer</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-green text-bold">+Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Floyd Miles.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Floyd Miles</p>
+                <p class="text-secondary">Send</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-red text-bold">-Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Ujang.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Ujang</p>
+                <p class="text-secondary">Send</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-red text-bold">-Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Raulemons.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Raulemons</p>
+                <p class="text-secondary">Transfer</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-green text-bold">+Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Reiva.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Reiva</p>
+                <p class="text-secondary">Transfer</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-green text-bold">+Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Thobie.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Thobie</p>
+                <p class="text-secondary">Send</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-red text-bold">-Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Buzjany.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Buzjany</p>
+                <p class="text-secondary">Transfer</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-green text-bold">+Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Adisurya.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Adisurya</p>
+                <p class="text-secondary">Send</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-red text-bold">-Rp50.000</p>
+              </span>
+            </div>
+            <!--  -->
+            <div class="box-user">
+              <div class="container-image-user">
+                <img src="./images/users/Miguelle.webp" alt="" />
+              </div>
+              <span class="info-user">
+                <p class="text-bold">Miguelle</p>
+                <p class="text-secondary">Transfer</p>
+              </span>
+              <span class="cash-user">
+                <p class="text-red text-bold">-Rp50.000</p>
+              </span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
