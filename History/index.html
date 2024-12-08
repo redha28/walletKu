@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+    <!-- jaro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+
+    <!-- monserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="padding-general">
+      <div class="section-logo">
+        <div class="container-icon" onclick="location='../index.html'">
+          <img
+            src="./images/icon-walletKu.webp"
+            alt="icon-walletKu"
+            width="50px" />
+          <p class="text-icon text-blue">WalletKu</p>
+        </div>
+      </div>
+      <div class="container-info-profile">
+        <span class="text-secondary text-bold">Ghaluh Wizard</span>
+        <img src="./images/users/Ghaluh.webp" alt="" />
+        <label class="hamburger">
+          <input type="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path
+              class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+        <div class="container-nav">
+          <button class="btn-nav">
+            <img
+              src="./images/icon/icon-dashboard.webp"
+              alt=""
+              class="icon-dashboard" />
+            <span>Dashboard</span>
+          </button>
+          <button
+            class="btn-nav"
+            onclick="location='../Transaction/index.html'">
+            <img src="./images/icon/icon-transfer.webp" alt="" class="icon" />
+            <span>Transfer</span>
+          </button>
+          <button class="btn-nav btn-nav-active">
+            <img src="./images/icon/history.webp" alt="" class="icon-active" />
+            <span>History</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/icon-topUp-nav.webp" alt="" class="icon" />
+            <span>Top Up</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/icon-profile.webp" alt="" class="icon" />
+            <span>Profile</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/Log Out.webp" alt="" class="icon" />
+            <span>Logout</span>
+          </button>
+        </div>
+      </nav>
+      <section class="main-content">
+        <div class="container-main">
+          <div class="header-main">
+            <img
+              src="./images/icon/history.webp"
+              alt=""
+              width="32"
+              height="32" />
+            <h1>History Transaction</h1>
+          </div>
+          <div class="container-history">
+            <div class="header-history">
+              <h2>Find Transaction</h2>
+              <!-- search bar -->
+              <div class="input-container">
+                <input
+                  type="text"
+                  name="text"
+                  class="input-search"
+                  placeholder="Enter Number Or Full Name" />
+                <span class="icon-search">
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="icon-search">
+                    <g>
+                      <path
+                        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                    </g>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="container-user">
+              <div class="box-user box-grey">
+                <div class="img-user">
+                  <img src="./images/users/Robert Fox.webp" alt="" />
+                </div>
+                <div class="name-user text-bold"><p>Robert Fox</p></div>
+                <div class="phone-user text-bold"><p>082116304337</p></div>
+                <div class="cash-user text-green text-semi-bold">
+                  <p>Rp.50.000</p>
+                </div>
+                <div class="icon-trash">
+                  <img src="./images/icon/Trash.webp" alt="" />
+                </div>
+              </div>
+              <div class="box-user box-grey">
+                <div class="img-user">
+                  <img src="./images/users/Floyd Miles.webp" alt="" />
+                </div>
+                <div class="name-user text-bold"><p>Floyd Miles</p></div>
+                <div class="phone-user text-bold"><p>(308) 555-0121</p></div>
+                <div class="cash-user text-red text-semi-bold">
+                  <p>Rp.50.000</p>
+                </div>
+                <div class="icon-trash">
+                  <img src="./images/icon/Trash.webp" alt="" />
+                </div>
+              </div>
+              <div class="box-user box-grey">
+                <div class="img-user">
+                  <img src="./images/users/Ujang.webp" alt="" />
+                </div>
+                <div class="name-user text-bold"><p>Ujang</p></div>
+                <div class="phone-user text-bold"><p>(704) 555-0127</p></div>
+                <div class="cash-user text-red text-semi-bold">
+                  <p>Rp.50.000</p>
+                </div>
+                <div class="icon-trash">
+                  <img src="./images/icon/Trash.webp" alt="" />
+                </div>
+              </div>
+              <div class="box-user box-grey">
+                <div class="img-user">
+                  <img src="./images/users/Raulemons.webp" alt="" />
+                </div>
+                <div class="name-user text-bold"><p>Raulemons</p></div>
+                <div class="phone-user text-bold"><p>(603) 555-0123</p></div>
+                <div class="cash-user text-green text-semi-bold">
+                  <p>Rp.50.000</p>
+                </div>
+                <div class="icon-trash">
+                  <img src="./images/icon/Trash.webp" alt="" />
+                </div>
+              </div>
+              <div class="box-user box-grey">
+                <div class="img-user">
+                  <img src="./images/users/Reiva.webp" alt="" />
+                </div>
+                <div class="name-user text-bold"><p>Reiva</p></div>
+                <div class="phone-user text-bold"><p>(671) 555-0110</p></div>
+                <div class="cash-user text-green text-semi-bold">
+                  <p>Rp.50.000</p>
+                </div>
+                <div class="icon-trash">
+                  <img src="./images/icon/Trash.webp" alt="" />
+                </div>
+              </div>
+              <div class="box-user box-grey">
+                <div class="img-user">
+                  <img src="./images/users/Thobie.webp" alt="" />
+                </div>
+                <div class="name-user text-bold"><p>Thobie</p></div>
+                <div class="phone-user text-bold"><p>(225) 555-0118</p></div>
+                <div class="cash-user text-red text-semi-bold">
+                  <p>Rp.50.000</p>
+                </div>
+                <div class="icon-trash">
+                  <img src="./images/icon/Trash.webp" alt="" />
+                </div>
+              </div>
+              <div class="box-user box-grey">
+                <div class="img-user">
+                  <img src="./images/users/Buzjany.webp" alt="" />
+                </div>
+                <div class="name-user text-bold"><p>Buzjany</p></div>
+                <div class="phone-user text-bold"><p>(217) 555-0113</p></div>
+                <div class="cash-user text-green text-semi-bold">
+                  <p>Rp.50.000</p>
+                </div>
+                <div class="icon-trash">
+                  <img src="./images/icon/Trash.webp" alt="" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="footer-user">
+                <p>Show 5 History of 100 History</p>
+                <div class="pagination">
+                  <a href="#">Prev</a>
+                  <a href="#" class="pagination-active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">6</a>
+                  <a href="#">Next</a>
+                </div>
+              </div>
+              <!-- pagination -->
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

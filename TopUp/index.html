@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+    <!-- jaro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+
+    <!-- monserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="padding-general">
+      <div class="section-logo">
+        <div class="container-icon" onclick="location='../index.html'">
+          <img
+            src="./images/icon-walletKu.webp"
+            alt="icon-walletKu"
+            width="50px" />
+          <p class="text-icon text-blue">WalletKu</p>
+        </div>
+      </div>
+      <div class="container-info-profile">
+        <span class="text-secondary text-bold">Ghaluh Wizard</span>
+        <img src="./images/user/Ghaluh.webp" alt="" />
+        <label class="hamburger">
+          <input type="checkbox" />
+          <svg viewBox="0 0 32 32">
+            <path
+              class="line line-top-bottom"
+              d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+            <path class="line" d="M7 16 27 16"></path>
+          </svg>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <nav>
+        <div class="container-nav">
+          <button class="btn-nav" onclick="location='../DashBoard/index.html'">
+            <img
+              src="./images/icon/icon-dashboard.webp"
+              alt=""
+              class="icon-dashboard" />
+            <span>Dashboard</span>
+          </button>
+          <button class="btn-nav btn-nav-active">
+            <img
+              src="./images/icon/icon-transfer.webp"
+              alt=""
+              class="icon-active" />
+            <span>Transfer</span>
+          </button>
+          <button class="btn-nav" onclick="location='../History/index.html'">
+            <img src="./images/icon/history.webp" alt="" class="icon" />
+            <span>History</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/icon-topUp-nav.webp" alt="" class="icon" />
+            <span>Top Up</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/icon-profile.webp" alt="" class="icon" />
+            <span>Profile</span>
+          </button>
+          <button class="btn-nav">
+            <img src="./images/icon/Log Out.webp" alt="" class="icon" />
+            <span>Logout</span>
+          </button>
+        </div>
+      </nav>
+      <section class="main-content">
+        <div class="container-main">
+          <div>
+            <div class="header-main">
+              <div class="title-main">
+                <img
+                  src="./images/icon/logo-topUp.webp"
+                  alt=""
+                  width="32"
+                  height="32" />
+                <h1>Top Up Account</h1>
+              </div>
+            </div>
+          </div>
+          <div class="container-main-topUp">
+            <div class="container-history">
+              <div class="header-history">
+                <h2>Account Information</h2>
+              </div>
+              <div class="box-user">
+                <div class="box-image">
+                  <img
+                    src="./images/user/ghaluh-full.webp"
+                    alt=""
+                    style="border-radius: 5px" />
+                </div>
+                <div class="info-user">
+                  <h4>Ghaluh Wizard</h4>
+                  <p class="text-secondary">(239) 555-0108</p>
+                  <div class="box-verified">
+                    <img src="./images/icon/verified.webp" alt="" />
+                    <p>Verified</p>
+                  </div>
+                </div>
+              </div>
+              <span>
+                <p class="text-bold" style="margin-bottom: 0.5rem">Amount</p>
+                <p class="text-secondary text-semi-bold">
+                  Type the amount you want to transfer and then press continue
+                  to the next steps.
+                </p>
+              </span>
+              <!-- Input -->
+              <div class="input-container">
+                <span class="icon-search">
+                  <img
+                    src="./images/icon/icon-cash.webp"
+                    alt=""
+                    class="icon-search" />
+                </span>
+                <input
+                  type="text"
+                  placeholder="Enter Nominal Transfer"
+                  class="input-search" />
+              </div>
+              <span>
+                <p class="text-bold" style="margin-bottom: 0.5rem">
+                  Payment Method
+                </p>
+                <p class="text-semi-bold text-secondary">
+                  Choose your payment method for top up account
+                </p>
+              </span>
+              <div class="container-payment">
+                <label class="payment-option">
+                  <input type="radio" name="brand" value="Bri" />
+                  <img src="images/icon/logo-bri.webp" alt="BRI Logo" />
+                  <span>BRI</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="brand" value="Dana" />
+                  <img src="./images/icon/logo-dana.webp" alt="Dana Logo" />
+                  <span>Dana</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="brand" value="BCA" />
+                  <img src="./images/icon/logo-bca.webp" alt="BCA Logo" />
+                  <span>BCA</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="brand" value="Gopay" />
+                  <img src="./images/icon/logo-gopay.webp" alt="Gopay Logo" />
+                  <span>Gopay</span>
+                </label>
+                <label class="payment-option">
+                  <input type="radio" name="brand" value="Ovo" />
+                  <img src="./images/icon/logo-ovo.webp" alt="Ovo Logo" />
+                  <span>Ovo</span>
+                </label>
+              </div>
+            </div>
+            <div class="container-topUp">
+              <div class="box-topUp">
+                <h4 style="margin-bottom: 1rem">Payment</h4>
+                <div class="space-beetween">
+                  <p class="text-secondary text-semi-bold">Order</p>
+                  <p class="text-bold">Idr. 40.000</p>
+                </div>
+                <div class="space-beetween">
+                  <p class="text-secondary text-semi-bold">Delivery</p>
+                  <p class="text-bold">Idr. 0</p>
+                </div>
+                <div
+                  class="space-beetween"
+                  style="padding-bottom: 1rem; border-bottom: 3 px solid grey">
+                  <p class="text-secondary text-semi-bold">Tax</p>
+                  <p class="text-bold">Idr. 4000</p>
+                </div>
+                <div class="space-beetween">
+                  <p class="text-secondary text-semi-bold">Sub Total</p>
+                  <p class="text-bold">Idr.44.000</p>
+                </div>
+                <button class="btn-submit">Submit</button>
+                <p class="text-secondary">
+                  *Get Discount if you pay with Bank Central Asia
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
