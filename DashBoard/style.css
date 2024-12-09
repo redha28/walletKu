@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -73,7 +74,9 @@ header {
 }
 
 .hamburger {
+  position: relative;
   cursor: pointer;
+  display: inline-block;
 }
 
 .hamburger input {
@@ -81,10 +84,63 @@ header {
 }
 
 .hamburger svg {
-  /* The size of the SVG defines the overall size */
   height: 3em;
-  /* Define the transition for transforming the SVG */
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger .menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.hamburger input:checked ~ .menu {
+  display: block;
+}
+
+/* Styling opsi menu */
+.hamburger .menu a {
+  display: flex;
+  align-items: center;
+  padding-block: 0.6rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.hamburger .menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.hamburger .menu a img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.hamburger input:checked ~ svg {
+  transform: rotate(90deg);
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
 }
 
 .line {
@@ -129,6 +185,7 @@ nav {
   padding-left: 2rem;
   padding-right: 3rem;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .container-main {
@@ -353,4 +410,128 @@ aside {
 .container-chart {
   display: flex;
   justify-content: center;
+}
+.nav-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .padding-general {
+    padding-inline: 1rem;
+  }
+  main {
+    display: block;
+  }
+  body {
+    position: relative;
+  }
+  nav {
+    display: none;
+  }
+  aside {
+    padding-block: 1rem;
+  }
+  .container-info-profile > .username,
+  .profile {
+    display: none;
+  }
+  .container-icon {
+    gap: 0.7rem;
+  }
+  .main-content {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .container-info {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .box-info {
+    padding: 0.5rem;
+  }
+  .container-icon-info {
+    gap: 0.5rem;
+  }
+  .text-bold {
+    font-weight: 700;
+  }
+  .container-service {
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .container-btn {
+    gap: 0.5rem;
+  }
+  .btn-topUp,
+  .btn-transfer {
+    padding-inline: 0.7rem;
+    padding-block: 0.6rem;
+  }
+  .container-chart > img {
+    width: 100%;
+  }
+  .info-chart {
+    text-align: center;
+  }
+  .info-chart {
+    text-align: center;
+    align-items: center;
+  }
+  .container-option {
+    gap: 0.5rem;
+  }
+  .container-option > select {
+    padding: 0.5rem;
+  }
+  .section-chart {
+    padding-inline: 0.5rem;
+  }
+  .nav-mobile {
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    background-color: aliceblue;
+    padding-inline: 0.5rem;
+    z-index: 1000;
+    justify-content: space-between;
+  }
+  .btn-nav-mobile {
+    border: none;
+    background-color: aliceblue;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding-inline: 0.4rem;
+    padding-block: 0.4rem;
+    width: 100%;
+  }
+  .btn-nav-m-active {
+    background-color: #2948ff;
+    color: aliceblue;
+    border-radius: 10px;
+  }
+  .btn-nav-mobile:hover {
+    cursor: pointer;
+    background-color: #2948ff;
+    color: aliceblue;
+    border-radius: 10px;
+  }
+  .btn-nav-mobile:hover .icon {
+    filter: brightness(0) invert(1);
+  }
+  .btn-nav-mobile img {
+    width: 24px;
+    height: 24px;
+  }
+  .btn-nav-mobile span {
+    font-size: 0.7rem;
+    font-weight: bold;
+  }
+  .container-chart img {
+    width: 100%;
+  }
 }
