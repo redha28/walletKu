@@ -47,7 +47,7 @@ body {
   align-items: center;
   gap: 1rem;
   width: max-content;
-  background-color: white;
+  background-color: aliceblue;
   border: none;
 }
 .container-icon:hover {
@@ -261,4 +261,30 @@ body {
 
 .forgot-password > a:hover {
   color: #2948ff;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-image-login {
+    display: none;
+  }
+  .container-login {
+    border-radius: 0;
+  }
+  .container-content-login {
+    padding-inline: 2rem;
+    width: 100%;
+  }
+  .title-login {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .container-content-login {
+    padding-inline: 2rem;
+    width: 100%;
+  }
+  .title-login {
+    font-size: 1.5rem;
+  }
 }
