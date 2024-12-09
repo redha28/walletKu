@@ -46,7 +46,7 @@ body {
   align-items: center;
   gap: 1rem;
   width: max-content;
-  background-color: white;
+  background-color: aliceblue;
   border: none;
 }
 .container-icon:hover {
@@ -208,7 +208,7 @@ body {
   align-items: center;
   padding-block: 0.8rem;
   background-color: #2948ff;
-  color: white;
+  color: aliceblue;
   border: 1px solid #2948ff;
   border-radius: 0.5rem;
   font-weight: bold;
@@ -246,4 +246,30 @@ body {
 .login-event > a {
   text-decoration: none;
   color: #2948ff;
+}
+
+@media only screen and (max-width: 767px) {
+  .container-image-regist {
+    display: none;
+  }
+  .container-regist {
+    border-radius: 0;
+  }
+  .container-content-regist {
+    padding-inline: 2rem;
+    width: 100%;
+  }
+  .title-regist {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .container-content-regist {
+    padding-inline: 2rem;
+    width: 100%;
+  }
+  .title-regist {
+    font-size: 1.5rem;
+  }
 }
