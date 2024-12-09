@@ -32,16 +32,28 @@
         </div>
       </div>
       <div class="container-info-profile">
-        <span class="text-secondary text-bold">Ghaluh Wizard</span>
-        <img src="./images/user/Ghaluh.webp" alt="" />
+        <span class="text-secondary text-bold username">Ghaluh Wizard</span>
+        <img src="./images/user/Ghaluh.webp" alt="" class="profile" />
         <label class="hamburger">
-          <input type="checkbox" />
+          <!-- Checkbox untuk toggle menu -->
+          <input type="checkbox" id="toggle-menu" />
+
+          <!-- Ikon hamburger SVG -->
           <svg viewBox="0 0 32 32">
             <path
               class="line line-top-bottom"
               d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
             <path class="line" d="M7 16 27 16"></path>
           </svg>
+
+          <!-- Menu Dropdown -->
+          <div class="menu">
+            <a href="../Profile/index.html">
+              <img src="./images/user/Ghaluh.webp" alt="Profile" />
+              <p class="text-bold">Ghaluh Wizard</p>
+            </a>
+            <a href="logout.html">Logout</a>
+          </div>
         </label>
       </div>
     </header>
@@ -53,29 +65,33 @@
             <img
               src="./images/icon/icon-dashboard.webp"
               alt=""
-              class="icon-dashboard" />
+              class="icon-grey" />
             <span>Dashboard</span>
           </button>
-          <button class="btn-nav btn-nav-active">
-            <img
-              src="./images/icon/icon-transfer.webp"
-              alt=""
-              class="icon-active" />
+          <button
+            class="btn-nav"
+            onclick="location='../Transaction/index.html'">
+            <img src="./images/icon/icon-transfer.webp" alt="" class="icon" />
             <span>Transfer</span>
           </button>
           <button class="btn-nav" onclick="location='../History/index.html'">
             <img src="./images/icon/history.webp" alt="" class="icon" />
             <span>History</span>
           </button>
-          <button class="btn-nav">
-            <img src="./images/icon/icon-topUp-nav.webp" alt="" class="icon" />
+          <button
+            class="btn-nav btn-nav-active"
+            onclick="location='../TopUp/index.html'">
+            <img
+              src="./images/icon/icon-topUp-nav.webp"
+              alt=""
+              class="icon-active" />
             <span>Top Up</span>
           </button>
-          <button class="btn-nav">
+          <button class="btn-nav" onclick="location='../Profile/index.html'">
             <img src="./images/icon/icon-profile.webp" alt="" class="icon" />
             <span>Profile</span>
           </button>
-          <button class="btn-nav">
+          <button class="btn-nav" onclick="location='../index.html'">
             <img src="./images/icon/Log Out.webp" alt="" class="icon" />
             <span>Logout</span>
           </button>
@@ -202,6 +218,44 @@
           </div>
         </div>
       </section>
+      <div class="nav-mobile">
+        <button
+          class="btn-nav-mobile"
+          onclick="location='../DashBoard/index.html'">
+          <img
+            src="./images/icon/icon-dashboard.webp"
+            alt=""
+            class="icon-grey" />
+          <span>Dashboard</span>
+        </button>
+        <button
+          class="btn-nav-mobile"
+          onclick="location='../Transaction/index.html'">
+          <img src="./images/icon/icon-transfer.webp" alt="" class="icon" />
+          <span>Transfer</span>
+        </button>
+        <button
+          class="btn-nav-mobile"
+          onclick="location='../History/index.html'">
+          <img src="./images/icon/history.webp" alt="" class="icon" />
+          <span>History</span>
+        </button>
+        <button
+          class="btn-nav-mobile btn-nav-m-active"
+          onclick="location='../TopUp/index.html'">
+          <img
+            src="./images/icon/icon-topUp-nav.webp"
+            alt=""
+            class="icon-active" />
+          <span>Top Up</span>
+        </button>
+        <button
+          class="btn-nav-mobile"
+          onclick="location='../Profile/index.html'">
+          <img src="./images/icon/icon-profile.webp" alt="" class="icon" />
+          <span>Profile</span>
+        </button>
+      </div>
     </main>
   </body>
 </html>
