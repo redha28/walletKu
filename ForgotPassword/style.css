@@ -132,3 +132,18 @@ main {
   transform: scale(0.85); /* Efek mengecil saat diklik */
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
 }
+
+@media only screen and (max-width: 767px) {
+  .container-forgot {
+    width: 80%;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+  }
+  .container-forgot > h1 {
+    font-size: 1.2rem;
+  }
+  .container-forgot > p {
+    font-size: 0.9rem;
+    color: #424954;
+  }
+}
