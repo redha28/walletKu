@@ -19,9 +19,13 @@
       href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./images/icon-walletKu.webp" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <main>
+      <div class="toast-succes display-invisible" id="toast">
+        Create Account Succes
+      </div>
       <section class="container-regist">
         <div class="container-content-regist">
           <button class="container-icon" onclick="location='../index.html'">
@@ -50,15 +54,18 @@
             <span style="margin: 0 10px; text-align: center">or</span>
             <div style="flex: 1; height: 1px; background: #000"></div>
           </div>
-          <form class="form-regist">
+          <form class="form-regist" id="registration-form">
             <label for="" class="text-bold">Email</label>
             <div class="group-mail">
               <img src="./images/icon-mail.webp" alt="" class="icon-mail" />
               <input
                 class="input-mail"
+                id="input-mail"
                 type="text"
-                placeholder="Enter Your Email" />
+                placeholder="Enter Your Email"
+                onchange="cekMail()" />
             </div>
+            <p id="mail-error-message" class="mail-error-message"></p>
             <label for="" class="text-bold">Password</label>
             <div class="group-password">
               <img
@@ -67,10 +74,14 @@
                 class="icon-password" />
               <input
                 type="password"
-                name=""
+                id="input-password"
                 class="input-password"
-                placeholder="Enter Your Password" />
-              <!-- <img src="./images/icon-eye.webp" alt="" /> -->
+                placeholder="Enter Your Password"
+                onchange="cekPassword()" />
+              <img
+                src="./images/icon-eye.webp"
+                alt=""
+                class="icon-toogle-password" />
             </div>
             <label for="" class="text-bold">Confirm Password</label>
             <div class="group-confirm-password">
@@ -82,10 +93,21 @@
                 type="password"
                 class="input-confirm-password"
                 name=""
-                placeholder="Enter Your Password Again" />
-              <!-- <img src="./images/icon-eye.webp" alt="" /> -->
+                placeholder="Enter Your Password Again"
+                id="input-confirm-password"
+                onchange="cekPassword()" />
+              <img
+                src="./images/icon-eye.webp"
+                alt=""
+                class="icon-toogle-password" />
             </div>
-            <button type="submit" class="btn-regist">Register</button>
+            <p id="password-error-message" class="password-error-message"></p>
+            <div class="loader display-invisible" id="loader">
+              <div class="justify-content-center jimu-primary-loading"></div>
+            </div>
+            <button type="submit" class="btn-regist" id="btn-regist">
+              Register
+            </button>
           </form>
           <span class="login-event"
             >Have An Account? <a href="../Login/login.html">Login</a></span
