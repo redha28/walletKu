@@ -372,9 +372,15 @@ body {
 }
 
 .display-invisible {
-  display: none;
+  visibility: hidden;
 }
 .display-visible {
+  visibility: visible;
+}
+.d-none {
+  display: none;
+}
+.d-block {
   display: block;
 }
 
@@ -389,19 +395,31 @@ body {
   }
 }
 
-.toast-succes {
+.toast {
   position: fixed;
-  background-color: #9cdba6;
   padding-inline: 2rem;
   padding-block: 1rem;
   font-weight: 700;
-  color: #399918;
   transform: translateY(-100%);
   animation: slide-in 0.5s forwards;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
   top: 0;
   opacity: 0;
+}
+
+.toast-succes {
+  background-color: #2948ff;
+  color: aliceblue;
+  font-weight: 700;
+  font-family: "Jaro", sans-serif;
+}
+
+.toast-error {
+  background-color: #a70b00;
+  color: aliceblue;
+  font-weight: 700;
+  font-family: "Jaro", sans-serif;
 }
 
 @media only screen and (max-width: 767px) {

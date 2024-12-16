@@ -23,9 +23,7 @@
   </head>
   <body>
     <main>
-      <div class="toast-succes display-invisible" id="toast">
-        Create Account Succes
-      </div>
+      <div class="toast display-invisible" id="toast"></div>
       <section class="container-regist">
         <div class="container-content-regist">
           <button class="container-icon" onclick="location='../index.html'">
@@ -63,6 +61,7 @@
                 id="input-mail"
                 type="text"
                 placeholder="Enter Your Email"
+                name="email"
                 onchange="cekMail()" />
             </div>
             <p id="mail-error-message" class="mail-error-message"></p>
@@ -77,7 +76,7 @@
                 id="input-password"
                 class="input-password"
                 placeholder="Enter Your Password"
-                onchange="cekPassword()" />
+                name="password" />
               <img
                 src="./images/icon-eye.webp"
                 alt=""
@@ -102,7 +101,7 @@
                 class="icon-toogle-password" />
             </div>
             <p id="password-error-message" class="password-error-message"></p>
-            <div class="loader display-invisible" id="loader">
+            <div class="loader d-none" id="loader">
               <div class="justify-content-center jimu-primary-loading"></div>
             </div>
             <button type="submit" class="btn-regist" id="btn-regist">
