@@ -19,6 +19,7 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icon-walletKu.webp" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -60,6 +61,7 @@
     </header>
 
     <main>
+      <div class="toast display-invisible" id="toast"></div>
       <nav>
         <div class="container-nav">
           <button class="btn-nav" onclick="location='../DashBoard/index.html'">
@@ -112,7 +114,7 @@
               </div>
             </div>
           </div>
-          <div class="container-history">
+          <form class="container-history" id="form-pin">
             <h2>Change Pin 👋</h2>
             <p class="text-secondary text-semi-bold">
               Please save your pin because this so important.
@@ -167,8 +169,14 @@
                 min="0"
                 max="1" />
             </div>
-            <button class="btn-submit">Submit</button>
-          </div>
+            <p id="pin-error-message" class="pin-error-message d-invisible"></p>
+            <div class="loader d-none" id="loader">
+              <div class="justify-content-center jimu-primary-loading"></div>
+            </div>
+            <button class="btn-submit" type="submit" id="btn-pin">
+              Submit
+            </button>
+          </form>
         </div>
       </section>
       <div class="nav-mobile">

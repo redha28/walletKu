@@ -193,6 +193,7 @@ nav {
   flex-direction: column;
   flex: 8;
   gap: 1rem;
+  min-height: 100%;
 }
 aside {
   border: 2px solid #e8e8e8;
@@ -335,6 +336,7 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex: 1;
 }
 
 .info-chart {
@@ -533,5 +535,14 @@ aside {
   }
   .container-chart img {
     width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .section-chart {
+    flex: none;
+  }
+  .container-main {
+    min-height: auto;
   }
 }

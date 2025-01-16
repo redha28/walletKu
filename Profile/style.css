@@ -773,8 +773,8 @@ h1 {
   }
   .btn-change,
   .btn-delete {
-    padding-inline: 0.6rem;
-    padding-block: 0.6rem;
+    padding-inline: 0.4rem;
+    padding-block: 0.4rem;
     width: 100%;
   }
 }

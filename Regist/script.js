@@ -7,6 +7,8 @@ const form = document.getElementById("registration-form");
 const btnRegist = document.getElementById("btn-regist");
 const loader = document.getElementById("loader");
 const toast = document.getElementById("toast");
+const iconEye = document.getElementById("icon-eye");
+const iconEyeConfirm = document.getElementById("icon-eye-confirm");
 
 function cekMail() {
   const regexMail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -62,18 +64,18 @@ function cekPassword() {
   return isValid;
 }
 
-function cekForm(e) {
+function handleForm(e) {
   e.preventDefault();
   const isMailValid = cekMail();
   const isPasswordValid = cekPassword();
-  const formData = new FormData(form);
-  const emailValue = formData.get("email");
-  const passwordValue = formData.get("password");
-  // Mendapatkan data yang sudah ada di localStorage (jika ada) kalau tidak ada mendapatkan array kosong
   if (isMailValid && isPasswordValid) {
+    const formData = new FormData(form);
+    const emailValue = formData.get("email");
+    const passwordValue = formData.get("password");
     btnRegist.classList.add("display-invisible");
     loader.classList.remove("display-invisible");
     loader.classList.add("d-block");
+    // Mendapatkan data yang sudah ada di localStorage (jika ada) kalau tidak ada mendapatkan array kosong
     let users = JSON.parse(localStorage.getItem("users")) || [];
     const userExists = users.some(
       (existingUser) => existingUser.email === emailValue
@@ -95,6 +97,7 @@ function cekForm(e) {
     const user = {
       email: emailValue,
       password: passwordValue,
+      pin: "",
     };
     users.push(user);
     // Menyimpan array users ke dalam localStorage
@@ -109,4 +112,26 @@ function cekForm(e) {
   }
 }
 
-form.addEventListener("submit", cekForm);
+form.addEventListener("submit", handleForm);
+
+function handleShowPassword() {
+  if (iconEye.src == "http://127.0.0.1:5500/Regist/images/eye-closed.webp") {
+    inputPassword.type = "text";
+    iconEye.src = "http://127.0.0.1:5500/Regist/images/icon-eye.webp";
+    return;
+  }
+  inputPassword.type = "password";
+  iconEye.src = "http://127.0.0.1:5500/Regist/images/eye-closed.webp";
+}
+
+function handleShowConfirmPassword() {
+  if (
+    iconEyeConfirm.src == "http://127.0.0.1:5500/Regist/images/eye-closed.webp"
+  ) {
+    confirmPassword.type = "text";
+    iconEyeConfirm.src = "http://127.0.0.1:5500/Regist/images/icon-eye.webp";
+    return;
+  }
+  confirmPassword.type = "password";
+  iconEyeConfirm.src = "http://127.0.0.1:5500/Regist/images/eye-closed.webp";
+}

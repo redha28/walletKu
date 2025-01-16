@@ -19,6 +19,7 @@
       rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" type="image/x-icon" href="./images/icon-walletKu.webp" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -95,14 +96,14 @@
         </div>
       </nav>
       <section class="main-content">
-        <div class="bg-black">
-          <div class="box-enter-pin">
+        <div class="bg-black d-none" id="modalBackground">
+          <div class="box-enter-pin" id="modal">
             <h4>TRANSFER TO GHALUH 1</h4>
             <p class="text-bold title-pin">Enter Your Pin 👋</p>
             <p class="text-secondary" style="font-weight: 500">
               Enter Your Pin For Transaction
             </p>
-            <form class="form-login" action="../TransferStatus/succes.html">
+            <form class="form-login" id="form-pin">
               <div class="pin-input-container">
                 <input
                   inputmode="numeric"
@@ -153,18 +154,20 @@
                   min="0"
                   max="1" />
               </div>
-              <button
-                type="submit"
-                class="btn-login"
-                onsubmit="location='../TransferStatus/succes.html'">
-                Next
-              </button>
+              <p
+                id="pin-error-message"
+                class="pin-error-message d-invisible"></p>
+              <div class="loader d-none" id="loader">
+                <div class="justify-content-center jimu-primary-loading"></div>
+              </div>
+              <button type="submit" class="btn-login" id="btn-pin">Next</button>
             </form>
             <span class="regist-event"
               >Forgot Your Pin? <a href="../Regist/index.html">Reset</a></span
             >
           </div>
         </div>
+
         <div class="container-main">
           <div class="header-main">
             <div class="title-main">
@@ -253,9 +256,7 @@
                 rows="5"
                 placeholder="Enter Some Notes"></textarea>
             </div>
-            <button
-              class="btn-transfer"
-              onclick="location='../TransferStatus/succes.html'">
+            <button class="btn-transfer" id="btn-submit">
               Submit & Transfer
             </button>
           </div>

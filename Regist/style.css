@@ -339,6 +339,11 @@ body {
   animation-delay: 0.16s !important;
 }
 
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
 @-webkit-keyframes loading-keys-app-loading {
   0%,
   80%,

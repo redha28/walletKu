@@ -78,9 +78,11 @@
                 placeholder="Enter Your Password"
                 name="password" />
               <img
-                src="./images/icon-eye.webp"
+                src="./images/eye-closed.webp"
                 alt=""
-                class="icon-toogle-password" />
+                class="icon-toogle-password"
+                id="icon-eye"
+                onclick="handleShowPassword()" />
             </div>
             <label for="" class="text-bold">Confirm Password</label>
             <div class="group-confirm-password">
@@ -96,9 +98,11 @@
                 id="input-confirm-password"
                 onchange="cekPassword()" />
               <img
-                src="./images/icon-eye.webp"
+                src="./images/eye-closed.webp"
+                id="icon-eye-confirm"
                 alt=""
-                class="icon-toogle-password" />
+                class="icon-toogle-password"
+                onclick="handleShowConfirmPassword()" />
             </div>
             <p id="password-error-message" class="password-error-message"></p>
             <div class="loader d-none" id="loader">

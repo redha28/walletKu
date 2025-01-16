@@ -19,9 +19,11 @@
       href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="./images/icon-walletKu.webp" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <main>
+      <div class="toast display-invisible" id="toast"></div>
       <section class="container-login">
         <div class="container-content-login">
           <button class="container-icon" onclick="location='../index.html'">
@@ -46,15 +48,19 @@
             <div style="flex: 1; height: 1px; background: #000"></div>
           </div>
 
-          <form class="form-login" action="../EnterPin/index.html">
+          <form class="form-login" id="login-form">
             <label for="" class="text-bold">Email</label>
             <div class="group-mail">
               <img src="./images/icon-mail.webp" alt="" class="icon-mail" />
               <input
                 class="input-mail"
                 type="text"
-                placeholder="Enter Your Email" />
+                name="email"
+                placeholder="Enter Your Email"
+                id="input-mail"
+                onchange="cekMail()" />
             </div>
+            <p id="mail-error-message" class="mail-error-message"></p>
             <label for="" class="text-bold">Password</label>
             <div class="group-password">
               <img
@@ -63,16 +69,31 @@
                 class="icon-password" />
               <input
                 type="password"
-                name=""
+                name="password"
                 class="input-password"
-                placeholder="Enter Your Password" />
-              <!-- <img src="./images/icon-eye.webp" alt="" /> -->
+                placeholder="Enter Your Password"
+                id="input-password"
+                onchange="cekPassword()" />
+              <img
+                src="./images/eye-closed.webp"
+                alt=""
+                id="icon-eye"
+                class="icon-toogle-password"
+                onclick="handleShowPassword()" />
             </div>
+            <p
+              id="password-error-message"
+              class="password-error-message d-invisible"></p>
             <span class="forgot-password"
               >Forgot Password?
               <a href="../ForgotPassword/index.html">Reset</a></span
             >
-            <button type="submit" class="btn-login">Login</button>
+            <div class="loader d-none" id="loader">
+              <div class="justify-content-center jimu-primary-loading"></div>
+            </div>
+            <button type="submit" class="btn-login" id="btn-login">
+              Login
+            </button>
           </form>
           <span class="regist-event"
             >Have An Account? <a href="../Regist/index.html">Regist</a></span
